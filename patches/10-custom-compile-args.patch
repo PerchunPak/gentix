@@ -1,0 +1,25 @@
+diff --git a/lib/systems/platforms.nix b/lib/systems/platforms.nix
+index 403ffc028f0b..3f31fc04ea81 100644
+--- a/lib/systems/platforms.nix
++++ b/lib/systems/platforms.nix
+@@ -16,6 +16,8 @@ rec {
+       autoModules = true;
+       target = "bzImage";
+     };
++
++    gcc.args = "-march=znver3 -O2 -pipe -fomit-frame-pointer -fno-semantic-interposition";
+   };
+ 
+   pc_simplekernel = lib.recursiveUpdate pc {
+diff --git a/pkgs/build-support/cc-wrapper/default.nix b/pkgs/build-support/cc-wrapper/default.nix
+index d842f3fc7090..46785e482d2f 100644
+--- a/pkgs/build-support/cc-wrapper/default.nix
++++ b/pkgs/build-support/cc-wrapper/default.nix
+@@ -246,6 +246,7 @@ let
+   # flags and other gcc flags as well.
+ 
+   machineFlags =
++    optional (targetPlatform ? gcc.args) targetPlatform.gcc.args ++
+     # Always add -march based on cpu in triple. Sometimes there is a
+     # discrepency (x86_64 vs. x86-64), so we provide an "arch" arg in
+     # that case.

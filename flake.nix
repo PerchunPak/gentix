@@ -1,12 +1,22 @@
 {
   description = "Gentoo + NixOS = Gentix";
 
-  inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-24.05";
+  inputs =
+    let
+      declarePatch = url: {
+        inherit url;
+        flake = false;
+      };
+    in
+    {
+      nixpkgs-upstream.url = "github:nixos/nixpkgs/nixos-24.05";
+      nixpkgs = "github:PerchunPak/nixpkgs/gentix";
 
-    home-manager.url = "github:nix-community/home-manager/release-24.05";
-    home-manager.inputs.nixpkgs.follows = "nixpkgs";
-  };
+      nixpkgs-patch-10 = declarePatch "";
+
+      home-manager.url = "github:nix-community/home-manager/release-24.05";
+      home-manager.inputs.nixpkgs.follows = "nixpkgs";
+    };
 
   outputs =
     {
