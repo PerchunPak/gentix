@@ -6,7 +6,7 @@
     nixpkgs.url = "github:PerchunPak/nixpkgs/gentix";
 
     nixpkgs-patch-10 = {
-      url = "https://raw.githubusercontent.com/PerchunPak/gentix/19fa6c55a7157ba93abd2ed9afea0999c55bcc51/patches/10-custom-compile-args.patch";
+      url = "https://github.com/PerchunPak/nixpkgs/commit/7db00adaf855f8b004a53db5c446d5fe86a06dc5.patch";
       flake = false;
     };
 
