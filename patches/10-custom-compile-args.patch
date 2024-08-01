@@ -1,3 +1,13 @@
+From 3b8512deb05a3277222bc865e19eaacc1124dace Mon Sep 17 00:00:00 2001
+From: PerchunPak <git@perchun.it>
+Date: Fri, 2 Aug 2024 01:42:52 +0200
+Subject: [PATCH] gentix: add custom compile arguments
+
+---
+ lib/systems/platforms.nix                 | 2 ++
+ pkgs/build-support/cc-wrapper/default.nix | 5 +++--
+ 2 files changed, 5 insertions(+), 2 deletions(-)
+
 diff --git a/lib/systems/platforms.nix b/lib/systems/platforms.nix
 index d2e8f77bec03..04c642ab3064 100644
 --- a/lib/systems/platforms.nix
@@ -27,3 +37,6 @@ index 4adc1dcb1f8d..cff6552467ec 100644
  
      # Always add -march based on cpu in triple. Sometimes there is a
      # discrepency (x86_64 vs. x86-64), so we provide an "arch" arg in
+-- 
+2.45.2
+
