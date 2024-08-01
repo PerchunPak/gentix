@@ -25,6 +25,34 @@
       "locked": {
         "lastModified": 1722372011,
         "narHash": "sha256-B2xRiC3NEJy/82ugtareBkRqEkPGpMyjaLxaR8LBxNs=",
+        "owner": "PerchunPak",
+        "repo": "nixpkgs",
+        "rev": "cf05eeada35e122770c5c14add958790fcfcbef5",
+        "type": "github"
+      },
+      "original": {
+        "owner": "PerchunPak",
+        "ref": "gentix",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs-patch-10": {
+      "flake": false,
+      "locked": {
+        "narHash": "sha256-d3FKzST5Wv6sbby7z5NNC26pGnAeRz+Xbd97UfmMINY=",
+        "type": "file",
+        "url": "https://raw.githubusercontent.com/PerchunPak/gentix/19fa6c55a7157ba93abd2ed9afea0999c55bcc51/patches/10-custom-compile-args.patch"
+      },
+      "original": {
+        "type": "file",
+        "url": "https://raw.githubusercontent.com/PerchunPak/gentix/19fa6c55a7157ba93abd2ed9afea0999c55bcc51/patches/10-custom-compile-args.patch"
+      }
+    },
+    "nixpkgs-upstream": {
+      "locked": {
+        "lastModified": 1722372011,
+        "narHash": "sha256-B2xRiC3NEJy/82ugtareBkRqEkPGpMyjaLxaR8LBxNs=",
         "owner": "nixos",
         "repo": "nixpkgs",
         "rev": "cf05eeada35e122770c5c14add958790fcfcbef5",
@@ -40,7 +68,9 @@
     "root": {
       "inputs": {
         "home-manager": "home-manager",
-        "nixpkgs": "nixpkgs"
+        "nixpkgs": "nixpkgs",
+        "nixpkgs-patch-10": "nixpkgs-patch-10",
+        "nixpkgs-upstream": "nixpkgs-upstream"
       }
     }
   },

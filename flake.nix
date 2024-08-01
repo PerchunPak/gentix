@@ -3,7 +3,7 @@
 
   inputs = {
     nixpkgs-upstream.url = "github:nixos/nixpkgs/nixos-24.05";
-    nixpkgs = "github:PerchunPak/nixpkgs/gentix";
+    nixpkgs.url = "github:PerchunPak/nixpkgs/gentix";
 
     nixpkgs-patch-10 = {
       url = "https://raw.githubusercontent.com/PerchunPak/gentix/19fa6c55a7157ba93abd2ed9afea0999c55bcc51/patches/10-custom-compile-args.patch";
