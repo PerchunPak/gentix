@@ -52,7 +52,7 @@
     "nixpkgs-patch-20": {
       "flake": false,
       "locked": {
-        "narHash": "sha256-qKX5vMvy0aSjL/UfUGNNYYgjBk3YTsaolgul2dkobok=",
+        "narHash": "sha256-XAlZ8DyFGCgXasc7jrJGjwmbCpgIAIUAjghN6qzqmIw=",
         "type": "file",
         "url": "https://github.com/PerchunPak/nixpkgs/commit/7db00adaf855f8b004a53db5c446d5fe86a06dc5.patch"
       },
