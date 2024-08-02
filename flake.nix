@@ -37,6 +37,7 @@
       ylib = inputs.nypkgs.lib.${system};
     in
     {
+      nixpkgs = pkgs;
       # Your custom packages
       # Accessible through 'nix build', 'nix shell', etc
       packages = import ./pkgs pkgs;
