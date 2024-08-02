@@ -59,6 +59,26 @@
             recursive = true;
           };
         };
+
+        gentix-iso = nixpkgs.lib.nixosSystem {
+          specialArgs = {
+            inherit inputs outputs ylib;
+          };
+
+          modules =
+            (ylib.umport {
+              paths = [ ./nixos ];
+              recursive = true;
+            })
+            ++ [
+              (
+                { pkgs, modulesPath, ... }:
+                {
+                  imports = [ (modulesPath + "/installer/cd-dvd/installation-cd-minimal.nix") ];
+                }
+              )
+            ];
+        };
       };
 
       # Standalone home-manager configuration entrypoint
