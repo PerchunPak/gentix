@@ -6,6 +6,10 @@
     nixpkgs.url = "github:PerchunPak/nixpkgs/gentix";
 
     nixpkgs-patch-10 = {
+      url = "https://github.com/PerchunPak/nixpkgs/commit/a15d098f96978e46467278d99d86cacc6c4edafa.patch";
+      flake = false;
+    };
+    nixpkgs-patch-20 = {
       url = "https://github.com/PerchunPak/nixpkgs/commit/7db00adaf855f8b004a53db5c446d5fe86a06dc5.patch";
       flake = false;
     };
@@ -14,7 +18,7 @@
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
     nypkgs = {
-      url = "github:yunfachi/nypkgs";
+      url = "github:yunfachi/nypkgs/master";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };

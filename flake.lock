@@ -24,10 +24,10 @@
     "nixpkgs": {
       "locked": {
         "lastModified": 1722556220,
-        "narHash": "sha256-rdE8YqWrzKAf44YnE7SKa0aY8G5QXjTbdlObyWHr1B4=",
+        "narHash": "sha256-aQ8C48dLP0XDh1ibHytG2B3iQtnwGNsWgBwyxurlKnU=",
         "owner": "PerchunPak",
         "repo": "nixpkgs",
-        "rev": "c3f93db730186810882cba7b9b9133cdbeff7518",
+        "rev": "2da1e045f3d27e736ed4df2352308919b113ef79",
         "type": "github"
       },
       "original": {
@@ -38,6 +38,18 @@
       }
     },
     "nixpkgs-patch-10": {
+      "flake": false,
+      "locked": {
+        "narHash": "sha256-xBS4dkRi8UyJVpprM523hlmNmHvtDxZXPCC+/fOU0Ks=",
+        "type": "file",
+        "url": "https://github.com/PerchunPak/nixpkgs/commit/a15d098f96978e46467278d99d86cacc6c4edafa.patch"
+      },
+      "original": {
+        "type": "file",
+        "url": "https://github.com/PerchunPak/nixpkgs/commit/a15d098f96978e46467278d99d86cacc6c4edafa.patch"
+      }
+    },
+    "nixpkgs-patch-20": {
       "flake": false,
       "locked": {
         "narHash": "sha256-qKX5vMvy0aSjL/UfUGNNYYgjBk3YTsaolgul2dkobok=",
@@ -81,6 +93,7 @@
       },
       "original": {
         "owner": "yunfachi",
+        "ref": "master",
         "repo": "nypkgs",
         "type": "github"
       }
@@ -90,6 +103,7 @@
         "home-manager": "home-manager",
         "nixpkgs": "nixpkgs",
         "nixpkgs-patch-10": "nixpkgs-patch-10",
+        "nixpkgs-patch-20": "nixpkgs-patch-20",
         "nixpkgs-upstream": "nixpkgs-upstream",
         "nypkgs": "nypkgs"
       }
