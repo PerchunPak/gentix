@@ -7,6 +7,8 @@
   ...
 }:
 {
+  imports = [ inputs.home-manager.nixosModules.home-manager ];
+
   nixpkgs = {
     # Configure your nixpkgs instance
     config = {
