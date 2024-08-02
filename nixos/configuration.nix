@@ -49,6 +49,8 @@
   };
 
   home-manager.users.perchun = import ../home-manager/home.nix;
+  home-manager.useGlobalPkgs = true;
+  home-manager.useUserPackages = true;
 
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
   system.stateVersion = "24.05";
