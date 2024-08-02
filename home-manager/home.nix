@@ -1,12 +1,7 @@
 # This is your home-manager configuration file
 # Use this to configure your home environment (it replaces ~/.config/nixpkgs/home.nix)
-{ outputs, lib, ... }:
+{ ... }:
 {
-  imports = lib.umport {
-    paths = [ ./. ];
-    recursive = true;
-  };
-
   nixpkgs = {
     # Configure your nixpkgs instance
     config = {

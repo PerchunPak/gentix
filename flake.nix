@@ -30,6 +30,7 @@
       inherit (self) outputs;
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
+      ylib = inputs.nypkgs.lib.${system};
     in
     {
       # Your custom packages
@@ -51,12 +52,12 @@
       nixosConfigurations = {
         perchun-gentix = nixpkgs.lib.nixosSystem {
           specialArgs = {
-            inherit inputs outputs;
+            inherit inputs outputs ylib;
           };
-          modules = [
-            # > Our main nixos configuration file <
-            ./nixos/configuration.nix
-          ];
+          modules = ylib.umport {
+            paths = [ ./nixos ];
+            recursive = true;
+          };
         };
       };
 
@@ -68,10 +69,10 @@
           extraSpecialArgs = {
             inherit inputs outputs;
           };
-          modules = [
-            # > Our main home-manager configuration file <
-            ./home-manager/home.nix
-          ];
+          modules = ylib.umport {
+            paths = [ ./home-manager ];
+            recursive = true;
+          };
         };
       };
     };

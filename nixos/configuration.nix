@@ -4,15 +4,9 @@
   inputs,
   lib,
   config,
-  outputs,
   ...
 }:
 {
-  imports = lib.umport {
-    paths = [ ./. ];
-    recursive = true;
-  };
-
   nixpkgs = {
     # Configure your nixpkgs instance
     config = {
