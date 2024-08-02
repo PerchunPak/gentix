@@ -37,7 +37,7 @@
       packages = import ./pkgs pkgs;
       # Formatter for your nix files, available through 'nix fmt'
       # Other options beside 'alejandra' include 'nixpkgs-fmt'
-      formatter = pkgs.nixfmt-rfc-style;
+      formatter.${system} = pkgs.nixfmt-rfc-style;
 
       # Your custom packages and modifications, exported as overlays
       overlays = import ./overlays { inherit inputs; };
