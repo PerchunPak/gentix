@@ -1,7 +1,14 @@
 # This is your home-manager configuration file
 # Use this to configure your home environment (it replaces ~/.config/nixpkgs/home.nix)
-{ ... }:
+{ ylib, lib, ... }:
 {
+  imports = lib.lists.remove ./home.nix (
+    ylib.umport {
+      paths = [ ./. ];
+      recursive = true;
+    }
+  );
+
   nixpkgs = {
     # Configure your nixpkgs instance
     config = {
@@ -14,6 +21,9 @@
     username = "perchun";
     homeDirectory = "/home/perchun";
   };
+
+  home-manager.useGlobalPkgs = true;
+  home-manager.useUserPackages = true;
 
   # Add stuff for your user as you see fit:
   # programs.neovim.enable = true;

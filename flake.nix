@@ -80,20 +80,5 @@
             ];
         };
       };
-
-      # Standalone home-manager configuration entrypoint
-      # Available through 'home-manager --flake .#your-username@your-hostname'
-      homeConfigurations = {
-        "perchun@perchun-gentix" = home-manager.lib.homeManagerConfiguration {
-          inherit pkgs;
-          extraSpecialArgs = {
-            inherit inputs outputs;
-          };
-          modules = ylib.umport {
-            paths = [ ./home-manager ];
-            recursive = true;
-          };
-        };
-      };
     };
 }
