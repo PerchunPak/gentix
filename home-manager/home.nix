@@ -2,12 +2,12 @@
 # Use this to configure your home environment (it replaces ~/.config/nixpkgs/home.nix)
 { ylib, lib, ... }:
 {
-  imports = lib.lists.remove ./home.nix (
-    ylib.umport {
-      paths = [ ./. ];
-      recursive = true;
-    }
-  );
+  # imports = lib.lists.remove ./home.nix (
+  #   ylib.umport {
+  #     paths = [ ./. ];
+  #     recursive = true;
+  #   }
+  # );
 
   nixpkgs = {
     # Configure your nixpkgs instance
